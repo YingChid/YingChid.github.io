@@ -1,1 +1,749 @@
-Hello World
+<html class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://yingchid.github.io/" />
+    <meta property="og:image" content="https://yingchid.github.io/images/logo.png" />
+    <meta property="og:site_name" content="Chidchamaiporn Kanmai" />
+    <title>Ying Chidchamaiporn Kanmai| Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Niramit:wght@200;300;400&family=Sarabun:wght@100&display=swap" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <style>
+      body {
+        font-family: 'Niramit', sans-serif;
+      }
+      .bg-custome {
+        background-color: #000420 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-custome">
+      <header class="absolute inset-x-0 top-0 z-50">
+        <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Ying Chidchamaiporn</span>
+              <img class="h-10 w-auto" src="images/logo.png" alt="..." loading="lazy" />
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white" id="open_dialog">
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a href="#" class="text-sm font-semibold leading-6 text-white">HOME</a>
+            <a href="#aboutme" class="text-sm font-semibold leading-6 text-white">ABOUT ME</a>
+            <a href="#education" class="text-sm font-semibold leading-6 text-white">EDUCATION</a>
+            <a href="#portfolio" class="text-sm font-semibold leading-6 text-white">PORTFOLO</a>
+            <a href="#work" class="text-sm font-semibold leading-6 text-white">WORK EXPERIENCE</a>
+            <a href="#skill" class="text-sm font-semibold leading-6 text-white">SKILL & TECHNICAL</a>
+          </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="lg:hidden" role="dialog" aria-modal="true">
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+
+          <div
+            id="sidebar"
+            class="dark:bg-black fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          >
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Ying Chidchamaiporn</span>
+                <img class="h-8 w-auto" src="images/logo.png" alt="..." loading="lazy" />
+              </a>
+              <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" id="close_dialog">
+                <span class="sr-only">Close menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-yellow-500">HOME</a>
+                  <a href="#aboutme" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-yellow-500"
+                    >ABOUT ME</a
+                  >
+                  <a href="#education" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-yellow-500"
+                    >EDUCATION</a
+                  >
+                  <a href="#portfolio" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-yellow-500"
+                    >PORTFOLO</a
+                  >
+                  <a href="#work" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-yellow-500"
+                    >SERVICE</a
+                  >
+                  <a href="#skill" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-yellow-500"
+                    >SKILL & TECHNICAL</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="relative isolate px-6 pt-14 lg:px-8">
+        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+          <div
+            class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            style="
+              clip-path: polygon(
+                74.1% 44.1%,
+                100% 61.6%,
+                97.5% 26.9%,
+                85.5% 0.1%,
+                80.7% 2%,
+                72.5% 32.5%,
+                60.2% 62.4%,
+                52.4% 68.1%,
+                47.5% 58.3%,
+                45.2% 34.5%,
+                27.5% 76.7%,
+                0.1% 64.9%,
+                17.9% 100%,
+                27.6% 76.8%,
+                76.1% 97.7%,
+                74.1% 44.1%
+              );
+            "
+          ></div>
+        </div>
+        <div class="py-24 sm:py-36 lg:py-44">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="max-w-sm m-auto sepia-0 contrast-100 border-blue-300 border-4 p-6 rounded-xl">
+              <img src="images/phtot.jpg" alt="..." loading="lazy" class="w-20px rounded-lg" loading="lazy" />
+            </div>
+
+            <div class="mt-10 lg:mt-32">
+              <figcaption class="mb-20">
+                <div class="space-x-3 text-xl sm:text-2xl lg:text-5xl">
+                  <div class="font-semibold text-gray-300">Chidchamaiporn Kanmai</div>
+                </div>
+              </figcaption>
+              <div class="text-left">
+                <span class="text-3xl font-bold text-gray-300">I'm a</span>
+                <h1 class="text-2xl sm:text-4xl lg:text-7xl font-bold tracking-tight text-yellow-200">Full Stack Software Developer</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="relative isolate overflow-hidden px-6 lg:px-8" id="aboutme">
+        <div class="mx-auto max-w-5xl lg:max-w-5xl">
+          <figure class="mt-2">
+            <blockquote class="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+              <h1 class="text-4xl text-yellow-200 text-bold pb-5">ABOUT ME</h1>
+              <p>
+                I’m Full Stack Software Developer. I interested frontend or backend developer. I have extensive experience working on database website
+                frontend or backend Framework. I can deploy server with Docker and Cloud.
+              </p>
+            </blockquote>
+          </figure>
+        </div>
+      </section>
+
+      <section class="relative isolate overflow-hidden px-6 py-32 sm:py-32 lg:px-8" id="education">
+        <div class="mx-auto max-w-5xl lg:max-w-5xl">
+          <figure class="mt-5">
+            <blockquote class="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+              <h1 class="text-4xl text-yellow-200 text-bold pb-5">EDUCATION</h1>
+            </blockquote>
+            <figcaption class="mt-10 text-center flex justify-center">
+              <div class="grid grid-cols-2 gap-4">
+                <a href="https://www.cmu.ac.th/" target="_blank">
+                  <div
+                    class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-purple-100 dark:bg-purple-800 dark:border-purple-700 dark:hover:bg-purple-700"
+                  >
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Chiang Mai University</h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-300">Master of Engineering - MEng, Computer Engineering</p>
+                    <p class="font-normal text-gray-700 dark:text-gray-300">(2016 - 2019)</p>
+                  </div>
+                </a>
+                <a href="https://www.cmu.ac.th/" target="_blank">
+                  <div
+                    class="block max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-purple-100 dark:bg-purple-800 dark:border-purple-700 dark:hover:bg-purple-700"
+                  >
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Chiang Mai University</h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-300">Bachelor of Science - BS, Statistics</p>
+                    <p class="font-normal text-gray-700 dark:text-gray-300">(2010 - 2014)</p>
+                  </div>
+                </a>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="relative isolate overflow-hidden px-6 py-32 sm:py-32 lg:px-8" id="work">
+        <div class="mx-auto max-w-6xl lg:max-w-6xl">
+          <figure class="mt-5">
+            <blockquote class="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+              <h1 class="text-4xl text-yellow-200 text-bold pb-5">WORK EXPERIENCE</h1>
+            </blockquote>
+            <div class="grid gap-4 mt-10">
+              <div class="p-5 mb-4 border-4 border-white rounded-lg dark:bg-gray-800">
+                <time class="font-bold">
+                  <p class="text-2xl text-green-500">Business & Integration Arch Senior Analyst</p>
+                  <a href="https://www.itone.co.th/" target="_blank" class="text-xl text-yellow-200">IT One</a>
+                  <p class="text-xl text-white">July 2022 – Current</p>
+                </time>
+                <ol class="mt-3 divider-gray-200 dark:divide-gray-700">
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <div class="text-sm font-normal">Develop and Implement both functional and technical design</div>
+                  </li>
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <div class="text-sm font-normal">Develop and Implement web applications Backend .Net Core</div>
+                  </li>
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <div class="text-sm font-normal">Implement web applications Frontend using Angular, Vue</div>
+                  </li>
+                </ol>
+                <div class="mt-5">
+                  <span
+                    class="bg-blue-100 text-blue-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400"
+                    >.Net Core</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400"
+                    >.Net Fremework</span
+                  >
+                  <span
+                    class="bg-red-100 text-red-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+                    >Angular</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400"
+                    >Vue.js</span
+                  >
+                  <span
+                    class="bg-orange-100 text-orange-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-orange-400 border border-orange-400"
+                    >MsSQL</span
+                  >
+                </div>
+              </div>
+              <div class="p-5 mb-4 border-4 border-violet-600 rounded-lg dark:bg-gray-800">
+                <time class="font-bold">
+                  <p class="text-2xl text-green-500">Software Developer</p>
+                  <a href="https://itsc.cmu.ac.th/" target="_blank" class="text-xl text-yellow-200">ITSC CMU</a>
+                  <p class="text-xl text-white">Sep 2020 – June 2022</p></time
+                >
+                <ol class="mt-3 divider-gray-200 dark:divide-gray-700">
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <div class="text-sm font-normal">Develop and implement Backend service with .Net core and NodeJS.</div>
+                  </li>
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <div class="text-sm font-normal">Develop and implement Frontend website with TypeScript, SCSS Angular and Vue.</div>
+                  </li>
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <div class="text-sm font-normal">Design table and Structure Database with MySQL MongoDB and MSSQL.</div>
+                  </li>
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <div class="text-sm font-normal">Setup and configure Server with Docker on linux.</div>
+                  </li>
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <div class="text-sm font-normal">Setup and configure Service on cloud AWS cloud such as EC2, S3, Lambda and Google Cloud.</div>
+                  </li>
+                </ol>
+                <div class="mt-5">
+                  <span
+                    class="bg-blue-100 text-blue-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400"
+                    >.Net Core</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400"
+                    >Node.js</span
+                  >
+                  <span
+                    class="bg-red-100 text-red-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+                    >Angular</span
+                  >
+                  <span
+                    class="bg-orange-100 text-orange-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-orange-400 border border-orange-400"
+                    >MsSQL</span
+                  >
+                  <span
+                    class="bg-orange-100 text-orange-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-orange-400 border border-orange-400"
+                    >MySQL</span
+                  >
+                  <span
+                    class="bg-orange-100 text-orange-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-orange-400 border border-orange-400"
+                    >MongoDB</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-400 border border-gray-400"
+                    >AWS</span
+                  >
+                </div>
+              </div>
+              <div class="p-5 mb-4 border-4 border-yellow-600 rounded-lg dark:bg-gray-800">
+                <time class="font-bold">
+                  <p class="text-2xl text-green-500">Software Developer</p>
+                  <a href="https://bananacoding.com/th" target="_blank" class="text-xl text-yellow-200">Banana Coding</a>
+                  <p class="text-xl text-white">Aug 2016 – Aug 2020</p></time
+                >
+                <ol class="mt-3 divider-gray-200 dark:divide-gray-700">
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <div class="text-sm font-normal">Develop and implement Backend service with Ruby on Rails, .Net core, Python and R Language.</div>
+                  </li>
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <div class="text-sm font-normal">Develop and Design Frontend website with Angular.</div>
+                  </li>
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <div class="text-sm font-normal">Develop Android Application with Java and Kotlin.</div>
+                  </li>
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <div class="text-sm font-normal">Design table and Structure Database with Postgres, MySQL, MSSQL, MongoDB and GraphQL.</div>
+                  </li>
+                </ol>
+                <div class="mt-5">
+                  <span
+                    class="bg-blue-100 text-blue-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400"
+                    >.Net Core</span
+                  >
+                  <span
+                    class="bg-red-100 text-red-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+                    >Ruby</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400"
+                    >Python</span
+                  >
+                  <span
+                    class="bg-red-100 text-red-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+                    >Angular</span
+                  >
+                  <span
+                    class="bg-orange-100 text-orange-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-orange-400 border border-orange-400"
+                    >MsSQL</span
+                  >
+                  <span
+                    class="bg-orange-100 text-orange-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-orange-400 border border-orange-400"
+                    >Postgres</span
+                  >
+                  <span
+                    class="bg-orange-100 text-orange-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-orange-400 border border-orange-400"
+                    >MongoDB</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-400 border border-gray-400"
+                    >AWS</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400"
+                    >R Language</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400"
+                    >Android</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400"
+                    >Kotlin</span
+                  >
+                </div>
+              </div>
+
+              <div class="p-5 mb-4 border-4 border-blue-600 rounded-lg dark:bg-gray-800">
+                <time class="font-bold">
+                  <p class="text-2xl text-green-500">Software Developer</p>
+                  <p class="text-xl text-yellow-200">TechMove</p>
+                  <p class="text-xl text-white">April 2014 – July 2016</p></time
+                >
+                <ol class="mt-3 divider-gray-200 dark:divide-gray-700">
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <div class="text-sm font-normal">Develop Backend service with PHP and NodeJs</div>
+                  </li>
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <div class="text-sm font-normal">Develop and Design Frontend website with Angular.</div>
+                  </li>
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <div class="text-sm font-normal">Develop Android Application with Java.</div>
+                  </li>
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <div class="text-sm font-normal">Design table and Structure Database with Postgres, MySQL.</div>
+                  </li>
+                </ol>
+                <div class="mt-5">
+                  <span
+                    class="bg-blue-100 text-blue-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400"
+                    >PHP</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400"
+                    >Android</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-400 border border-gray-400"
+                    >JAVA</span
+                  >
+                  <span
+                    class="bg-yellow-100 text-yellow-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-yellow-400 border border-yellow-400"
+                    >Javascript</span
+                  >
+                  <span
+                    class="bg-red-100 text-red-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+                    >Angular.js</span
+                  >
+                  <span
+                    class="bg-orange-100 text-orange-800 text-md font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-orange-400 border border-orange-400"
+                    >MySQL</span
+                  >
+                </div>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="relative isolate overflow-hidden px-6 py-12 sm:py-12 lg:px-8" id="portfolio">
+        <div class="mx-auto max-w-6xl lg:max-w-6xl">
+          <figure class="mt-5">
+            <blockquote class="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+              <h1 class="text-4xl text-yellow-200 text-bold pb-5">PORTFOLO</h1>
+            </blockquote>
+            <div class="grid gap-4 mt-10">
+              <div>
+                <img
+                  class="h-auto max-w-full rounded-lg"
+                  src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/p6.png"
+                  loading="lazy"
+                  id="show_image"
+                />
+              </div>
+
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pt-5">
+                <div>
+                  <img
+                    class="profile h-auto max-w-full rounded-lg cursor-pointer border-4 hover:border-yellow-500 hover:animate-bounce"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/p1.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="profile h-auto max-w-full rounded-lg cursor-pointer border-4 hover:border-yellow-500 hover:animate-bounce"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/p2.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="profile h-auto max-w-full rounded-lg cursor-pointer border-4 hover:border-yellow-500 hover:animate-bounce"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/p3.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="profile h-auto max-w-full rounded-lg cursor-pointer border-4 hover:border-yellow-500 hover:animate-bounce"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/p4.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="profile h-auto max-w-full rounded-lg cursor-pointer border-4 hover:border-yellow-500 hover:animate-bounce"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/p5.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="profile h-auto max-w-full rounded-lg cursor-pointer border-4 hover:border-yellow-500 hover:animate-bounce"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/p6.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="profile h-auto max-w-full rounded-lg cursor-pointer border-4 hover:border-yellow-500 hover:animate-bounce"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/p7.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="relative isolate overflow-hidden px-6 py-32 sm:py-32 lg:px-8" id="skill">
+        <div class="mx-auto max-w-6xl lg:max-w-6xl">
+          <figure class="mt-5">
+            <blockquote class="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+              <h1 class="text-4xl text-yellow-200 text-bold pb-5">SKILL & TECHNICAL</h1>
+            </blockquote>
+            <div class="grid gap-4">
+              <div class="grid grid-cols-2 md:grid-cols-6 gap-4 pt-5">
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/html.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">HTML5</p>
+                </div>
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/css.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">CSS</p>
+                </div>
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/js.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">JAVASCRIPT</p>
+                </div>
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/typescript.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">TYPESCRIPT</p>
+                </div>
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/python.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">PYTHON</p>
+                </div>
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/NET_Core_Logo.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">.Net Core</p>
+                </div>
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/java.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">JAVA</p>
+                </div>
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/php.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">PHP</p>
+                </div>
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/r-project.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">R Language</p>
+                </div>
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/angular.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">ANGULAR</p>
+                </div>
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/vuejs.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">VUE</p>
+                </div>
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/mysql.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">MYSQL</p>
+                </div>
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/mssql.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">MSSQL</p>
+                </div>
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/mongodb.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">MONGODB</p>
+                </div>
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/postgres.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">POSTGRES</p>
+                </div>
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/docker.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">DOCKER</p>
+                </div>
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/aws.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">AWS</p>
+                </div>
+                <div>
+                  <img
+                    class="mt-20 w-20 h-20 object-fill m-auto"
+                    src="https://ying-profile.s3.ap-southeast-1.amazonaws.com/linux.png"
+                    alt="..."
+                    loading="lazy"
+                  />
+                  <p class="text-white pt-2 text-center">LINUX</p>
+                </div>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </section>
+      <section class="relative isolate overflow-hidden" id="portfolio">
+        <footer class="bg-white dark:bg-gray-900">
+          <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+              <div class="mb-6 md:mb-0 w-3/5">
+                <div class="w-full">
+                  <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Contact Me</h2>
+                  <div class="mt-6 flex gap-x-4">
+                    <label for="email-address" class="sr-only">Email address</label>
+                    <input
+                      id="email-address"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      required
+                      class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                      placeholder="Enter your email"
+                    />
+                    <button
+                      type="submit"
+                      class="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                    >
+                      send
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid grid-cols-1">
+                <div>
+                  <h2 class="mt-12 text-xl font-semibold text-gray-900 dark:text-white">Email: chidchamaiporn.k@gmail.com</h2>
+                </div>
+              </div>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+              <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 YingChid. </span>
+              <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+                <a href="https://www.linkedin.com/in/chidchamaiporn/" target="_blank" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg
+                    class="w-6 h-6 text-gray-800 dark:text-white"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 15 15"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.979 5v1.586a3.5 3.5 0 0 1 3.082-1.574C14.3 5.012 15 7.03 15 9.655V15h-3v-4.738c0-1.13-.229-2.584-1.995-2.584-1.713 0-2.005 1.23-2.005 2.5V15H5.009V5h2.97ZM3 2.487a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"
+                      clip-rule="evenodd"
+                    />
+                    <path d="M3 5.012H0V15h3V5.012Z" />
+                  </svg>
+
+                  <span class="sr-only">linkin</span>
+                </a>
+                <a href="https://github.com/YingChid" target="_blank" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                  <svg
+                    class="w-6 h-6 text-gray-800 dark:text-white"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span class="sr-only">GitHub account</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
