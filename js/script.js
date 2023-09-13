@@ -1,4 +1,5 @@
 $(function () {
+  $('#sidebar').hide(500);
   $('#close_dialog').click(() => {
     $('#sidebar').hide(500);
   });
@@ -9,3 +10,7 @@ $(function () {
     $('#show_image').attr('src', event.target.src);
   });
 });
+
+function hide() {
+  $('#sidebar').hide(500);
+}
